@@ -5,6 +5,5 @@ public class ClickHandler : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData)
     {
-        
     }
 }

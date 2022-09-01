@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a927848c61f923418fd4e0825155068, type: 3}
   m_Name: FrostSkeleton
   m_EditorClassIdentifier: 
-  _healPoint: 0
+  _healPoint: 60
   _dropList: 
-  _entitySprite: {fileID: 0}
+  _entitySprite: {fileID: 21300000, guid: 75d4afa89299e294dace88c2fbbadb02, type: 3}
