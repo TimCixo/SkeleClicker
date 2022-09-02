@@ -6,11 +6,11 @@ public class EntityData : ScriptableObject
     [SerializeField]
     private int _healPoint;
     [SerializeField]
-    private string _dropList;
+    private Drop[] _dropList;
     [SerializeField]
-    private Sprite _entitySprite;
+    private ElementType _type;
     
     public int HealPoint => _healPoint;
-    public string DropList => _dropList;
-    public Sprite EntitySprite => _entitySprite;
+    public Drop[] DropList => _dropList;
+    public ElementType Type => _type;
 }

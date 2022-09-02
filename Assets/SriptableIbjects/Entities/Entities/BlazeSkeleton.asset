@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BlazeSkeleton
   m_EditorClassIdentifier: 
   _healPoint: 100
-  _dropList: 
-  _entitySprite: {fileID: 21300000, guid: 29193be5cd018734c988dbb1c06ee89f, type: 3}
+  _dropList: []
+  _type: 1

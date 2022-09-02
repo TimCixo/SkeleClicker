@@ -6,8 +6,8 @@ public class DropData : ScriptableObject
     [SerializeField]
     private string _name;
     [SerializeField]
-    private Sprite _icon;
+    private string _description;
 
     public string Name => _name;
-    public Sprite Icon => _icon;
+    public string Description => _description;
 }

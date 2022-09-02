@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c87a6f625e7b0a43866ae3192b6b018, type: 3}
   m_Name: FrostPerk
   m_EditorClassIdentifier: 
-  _perkName: Frost
+  _perkName: Frost element
   _upgradeCost: 10
   _damage: 2
-  _icon: {fileID: 21300000, guid: f18d82cc6df1eda48937d658138baf40, type: 3}
+  _type: 2

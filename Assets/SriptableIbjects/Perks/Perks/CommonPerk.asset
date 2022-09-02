@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c87a6f625e7b0a43866ae3192b6b018, type: 3}
   m_Name: CommonPerk
   m_EditorClassIdentifier: 
-  _perkName: Common
+  _perkName: Common element
   _upgradeCost: 10
   _damage: 5
-  _icon: {fileID: 21300000, guid: b0f63f801f7abed4caf41f97cf4cc572, type: 3}
+  _type: 0

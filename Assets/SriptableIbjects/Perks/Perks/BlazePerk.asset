@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c87a6f625e7b0a43866ae3192b6b018, type: 3}
   m_Name: BlazePerk
   m_EditorClassIdentifier: 
-  _perkName: Blaze
+  _perkName: Blaze element
   _upgradeCost: 10
   _damage: 3
-  _icon: {fileID: 21300000, guid: 9aba339b267ea9e488181d80d1873377, type: 3}
+  _type: 1
