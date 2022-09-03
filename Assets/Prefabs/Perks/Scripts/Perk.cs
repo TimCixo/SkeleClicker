@@ -3,24 +3,46 @@ using UnityEngine;
 public class Perk : MonoBehaviour
 {
     [SerializeField]
-    private readonly string _name;
+    private PerkData _data;
     [SerializeField]
-    private readonly Sprite _icon;
-    [SerializeField]
-    private readonly uint _damage;
+    private string _upgradeDrop;
 
-    [SerializeField]
-    private uint _level;
-    [SerializeField]
+    private string _name;
+    private string _description;
     private uint _upgradeCost;
+    private uint _damage;
+    private IElement _type;
 
-    public uint GetDamage(ElementType elementType)
+    private uint _level = 1;
+    private float _index = 1.5f;
+
+    private void Start()
     {
-        return 0;
+        _name = _data.Name;
+        _description = _data.Description;
+        _upgradeDrop = _data.UpgradeDrop;
+        _upgradeCost = _data.UpgradeCost;
+        _damage = _data.Damage;
+        _type = _data.Type;
+    }
+
+    public uint GetDamage(IElement elementType)
+    {
+        return (uint)(_type.GetIndex(elementType) * _damage * _level);
     }
 
     public bool TryUpgrade()
-    { 
-        return false;
+    {
+        if (DropController.TryDecreaseCount(_upgradeDrop, _upgradeCost))
+        {
+            _level++;
+            _upgradeCost = (uint)(_upgradeCost * _index);
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

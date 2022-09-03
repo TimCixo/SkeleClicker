@@ -3,20 +3,40 @@ using UnityEngine;
 public class Skeleton : MonoBehaviour
 {
     [SerializeField]
-    private readonly string _name;
-    [SerializeField]
-    private readonly ElementType _type;
-    [SerializeField]
-    private readonly GameObject[] _dropTable;
+    private EntityData _data;
 
-    [SerializeField]
+    private string _name;
+    private IElement _type;
+    private GameObject[] _dropList;
+
     private int _healPoints;
+
+    public IElement Type => _type;
+
+    private void Start()
+    {
+        _name = _data.Name;
+        _type = _data.Type;
+        _dropList = _data.DropList;
+        _healPoints = _data.HealPoints;
+    }
 
     public void TakeDamage(uint damage)
     {
+        _healPoints -= (int)damage;
+
+        if (_healPoints <= 0)
+        {
+            Die();
+        }
     }
 
     private void Die()
-    { 
+    {
+        DropController.AddDrop(_dropList);
+
+        Destroy(gameObject);
+
+        SceneController.SpawnSkeleton();
     }
 }

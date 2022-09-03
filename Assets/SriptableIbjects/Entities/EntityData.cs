@@ -4,13 +4,16 @@ using UnityEngine;
 public class EntityData : ScriptableObject
 {
     [SerializeField]
-    private int _healPoint;
-    [SerializeField]
-    private Drop[] _dropList;
+    private string _name;
     [SerializeField]
     private ElementType _type;
-    
-    public int HealPoint => _healPoint;
-    public Drop[] DropList => _dropList;
+    [SerializeField]
+    private int _healPoints;
+    [SerializeField]
+    private GameObject[] _dropList;
+
+    public string Name => _name;
     public ElementType Type => _type;
+    public int HealPoints => _healPoints;
+    public GameObject[] DropList => _dropList;
 }
