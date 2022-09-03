@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CommonBone
   m_EditorClassIdentifier: 
   _name: Bone
-  _icon: {fileID: 21300000, guid: 238ad492f7f0f644d9dfcd39e3e18a6f, type: 3}
+  _description: Regular bone. Maybe make a xelophone out of it?

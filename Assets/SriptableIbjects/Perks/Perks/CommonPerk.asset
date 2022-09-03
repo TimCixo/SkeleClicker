@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c87a6f625e7b0a43866ae3192b6b018, type: 3}
   m_Name: CommonPerk
   m_EditorClassIdentifier: 
-  _perkName: Common element
+  _name: Common perk
+  _description: Deals a fixed amount of damage to each creature
+  _upgradeDrop: {fileID: 0}
   _upgradeCost: 10
   _damage: 5
-  _type: 0

@@ -5,7 +5,7 @@ public class Perk : MonoBehaviour
     [SerializeField]
     private PerkData _data;
     [SerializeField]
-    private string _upgradeDrop;
+    private GameObject _upgradeDrop;
 
     private string _name;
     private string _description;
@@ -33,7 +33,9 @@ public class Perk : MonoBehaviour
 
     public bool TryUpgrade()
     {
-        if (DropController.TryDecreaseCount(_upgradeDrop, _upgradeCost))
+        string upgradeDropName = _upgradeDrop.GetComponent<Drop>().Name;
+
+        if (DropController.TryDecreaseCount(upgradeDropName, _upgradeCost))
         {
             _level++;
             _upgradeCost = (uint)(_upgradeCost * _index);

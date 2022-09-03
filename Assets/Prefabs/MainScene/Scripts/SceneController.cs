@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class SceneController : MonoBehaviour
 {
@@ -11,6 +10,8 @@ public class SceneController : MonoBehaviour
     private void Start()
     {
         _spawner = gameObject.transform.Find("spawner");
+
+        SpawnSkeleton();
     }
 
     public static void SpawnSkeleton()

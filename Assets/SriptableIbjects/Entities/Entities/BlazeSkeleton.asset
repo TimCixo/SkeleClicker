@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a927848c61f923418fd4e0825155068, type: 3}
   m_Name: BlazeSkeleton
   m_EditorClassIdentifier: 
-  _healPoint: 100
+  _name: Blaze skeleton
+  _healPoints: 100
   _dropList: []
-  _type: 1

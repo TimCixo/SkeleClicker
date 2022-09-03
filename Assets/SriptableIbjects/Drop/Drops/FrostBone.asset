@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FrostBone
   m_EditorClassIdentifier: 
   _name: Frost bone
-  _icon: {fileID: 21300000, guid: 03b2ec0678252884081ebdc310b39a8c, type: 3}
+  _description: Frost Skeleton Bone. Slides in hand.

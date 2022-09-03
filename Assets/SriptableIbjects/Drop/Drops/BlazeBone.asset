@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: BlazeBone
   m_EditorClassIdentifier: 
   _name: Blaze bone
-  _icon: {fileID: 21300000, guid: 54e2b68e1613a4a42a7977c35039bdcd, type: 3}
+  _description: Bone charred by eternal flames. Surprisingly durable, for something
+    that has been constantly exposed to high temperatures.
