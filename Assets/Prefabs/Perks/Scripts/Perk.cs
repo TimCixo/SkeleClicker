@@ -23,7 +23,7 @@ public class Perk : MonoBehaviour
         _upgradeDrop = _data.UpgradeDrop;
         _upgradeCost = _data.UpgradeCost;
         _damage = _data.Damage;
-        _type = _data.Type;
+        _type = ElementController.GetElement(_data.Type);
     }
 
     public uint GetDamage(IElement elementType)

@@ -16,7 +16,7 @@ public class Skeleton : MonoBehaviour
     private void Start()
     {
         _name = _data.Name;
-        _type = _data.Type;
+        _type = ElementController.GetElement(_data.Type);
         _dropList = _data.DropList;
         _healPoints = _data.HealPoints;
     }
