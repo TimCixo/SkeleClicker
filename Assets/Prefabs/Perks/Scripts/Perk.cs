@@ -16,6 +16,8 @@ public class Perk : MonoBehaviour
     private uint _level = 1;
     private float _index = 1.5f;
 
+    public string Name => _name;
+
     private void Start()
     {
         _name = _data.Name;

@@ -1,7 +1,14 @@
 using UnityEngine;
 
-public class PerkController
+public class PerkController : MonoBehaviour
 {
     [SerializeField]
-    public static readonly GameObject[] Perks;
+    private GameObject[] _perks;
+
+    public static GameObject[] Perks;
+
+    private void Start()
+    {
+        Perks = _perks;
+    }
 }

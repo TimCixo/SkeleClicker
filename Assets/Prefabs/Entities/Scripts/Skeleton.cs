@@ -7,7 +7,7 @@ public class Skeleton : MonoBehaviour
 
     private string _name;
     private IElement _type;
-    private GameObject[] _dropList;
+    private GameObject _drop;
 
     private int _healPoints;
 
@@ -17,10 +17,11 @@ public class Skeleton : MonoBehaviour
     {
         _name = _data.Name;
         _type = ElementController.GetElement(_data.Type);
-        _dropList = _data.DropList;
+        _drop = _data.Drop;
         _healPoints = _data.HealPoints;
-    }
 
+        _drop.GetComponent<Drop>().IncreaseCount(_data.DropCount);
+    }
     public void TakeDamage(uint damage)
     {
         _healPoints -= (int)damage;
@@ -33,10 +34,12 @@ public class Skeleton : MonoBehaviour
 
     private void Die()
     {
-        DropController.AddDrop(_dropList);
+        GameObject spawner = GameObject.Find("Background");
+
+        DropController.AddDrop(_drop);
 
         Destroy(gameObject);
 
-        SceneController.SpawnSkeleton();
+        spawner.GetComponent<SceneController>().SpawnSkeleton();
     }
 }

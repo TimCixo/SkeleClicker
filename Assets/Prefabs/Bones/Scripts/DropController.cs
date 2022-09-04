@@ -1,23 +1,28 @@
 using UnityEngine;
 
-public static class DropController
+public class DropController : MonoBehaviour
 {
     [SerializeField]
-    public static readonly GameObject[] DropList;
+    private GameObject[] _dropList;
 
-    public static void AddDrop(GameObject[] dropList)
+    public static GameObject[] DropList;
+
+    private void Start()
     {
+        DropList = _dropList;
+    }
+
+    public static void AddDrop(GameObject drop)
+    {
+        Drop otherDrop = drop.GetComponent<Drop>();
+
         foreach (GameObject i in DropList)
         {
-            foreach (GameObject j in dropList)
-            {
-                Drop ownDrop = i.GetComponent<Drop>();
-                Drop otherDrop = j.GetComponent<Drop>();
+            Drop ownDrop = i.GetComponent<Drop>();
 
-                if (ownDrop.Name == otherDrop.Name)
-                {
-                    ownDrop.IncreaseCount(otherDrop.Count);
-                }
+            if (ownDrop.Name == otherDrop.Name)
+            {
+                ownDrop.IncreaseCount(otherDrop.Count);
             }
         }
     }

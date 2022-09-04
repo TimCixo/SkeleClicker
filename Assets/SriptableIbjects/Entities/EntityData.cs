@@ -10,10 +10,13 @@ public class EntityData : ScriptableObject
     [SerializeField]
     private int _healPoints;
     [SerializeField]
-    private GameObject[] _dropList;
+    private uint _dropCount;
+    [SerializeField]
+    private GameObject _drop;
 
     public string Name => _name;
     public ElementTypes Type => _type;
     public int HealPoints => _healPoints;
-    public GameObject[] DropList => _dropList;
+    public uint DropCount => _dropCount;
+    public GameObject Drop => _drop;
 }
